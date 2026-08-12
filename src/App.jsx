@@ -40,19 +40,19 @@ function App() {
             />
           }
         />
-
-        {/* Landing */}
-        <Route
-          path="/Landing"
-          element={
-            loggedUser ? (
-              <Landing user={loggedUser} />
-            ) : (
-              <Navigate to="/" replace />
-            )
-          }
-        />
-
+<Route
+  path="/Landing"
+  element={
+    loggedUser ? (
+      <Landing
+        user={loggedUser}
+        setLoggedUser={setLoggedUser}
+      />
+    ) : (
+      <Navigate to="/" replace />
+    )
+  }
+/>
       </Routes>
     </BrowserRouter>
   );
